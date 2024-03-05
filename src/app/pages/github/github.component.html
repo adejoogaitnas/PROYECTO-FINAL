@@ -1,0 +1,19 @@
+<!-- app.component.html -->
+<h1>GitHub User Information</h1>
+<div>
+    <label for="username">Enter GitHub Username:</label>
+    <input type="text" id="username" required [(ngModel)]="username">
+    <button (click)="getUserInfo()">Get User Info</button>
+</div>
+
+<div id="result">
+    <h2>{{ userData.name }}</h2>
+    <p>Username: {{ userData.login }}</p>
+    <p>Location: {{ userData.location || 'Not available' }}</p>
+    <p>Public Repositories: {{ userData.public_repos }}</p>
+    <p>Followers: {{ userData.followers }}</p>
+    <p>Profile: <a [href]="userData.html_url" target="_blank">{{ userData.html_url }}</a></p>
+</div>
+
+<textarea id="jsonSnippet" rows="10" cols="50" readonly>{{ jsonSnippet }}</textarea>
+
