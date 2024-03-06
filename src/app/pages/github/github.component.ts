@@ -1,44 +1,38 @@
-// app.component.ts
-
-import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { GithubService } from '../../services/github.service';
+import { inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-github',
   templateUrl: './github.component.html',
-  imports: [FormsModule, CommonModule, RouterOutlet],
+  styleUrls: ['./github.component.css'],
   standalone: true,
-  styleUrls: ['./github.component.css']
+  imports: [CommonModule, FormsModule]
 })
+  
 export class GithubComponent {
+  private _github=inject(GithubService)
   username: string = '';
   userData: any = {};
   jsonSnippet: string = '';
 
-  constructor() {}
+  constructor(private githubService: GithubService) {}
 
   getUserInfo() {
-    const username = this.username;
-    const apiUrl = `https://api.github.com/users/${username}`;
-
-    fetch(apiUrl)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+    this._github.getUserInfo(this.username)
+      .subscribe(
+        userData => {
+          this.userData = userData;
+          this.jsonSnippet = JSON.stringify(userData, null, 2);
+        },
+        error => {
+          console.error('Error:', error.message);
+          this.userData = {};
+          this.jsonSnippet = '';
         }
-        return response.json();
-      })
-      .then(userData => {
-        this.userData = userData;
-        this.jsonSnippet = JSON.stringify(userData, null, 2);
-      })
-      .catch(error => {
-        console.error('Error:', error.message);
-        this.userData = {};
-        this.jsonSnippet = '';
-      });
+      );
   }
 }
