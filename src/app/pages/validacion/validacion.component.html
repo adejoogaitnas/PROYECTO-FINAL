@@ -1,3 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center mt-0 container-fluid "> <!-- Ajuste en el margen superior -->
+            <h1 class="display-6 mt-4">Validación App</h1>
+            <p class="lead mb-1">Este proyecto nos ayuda a comprender la sintaxis de las expresiones regulares poniendolas en practica en un formulario de registro.</p>
+            <!-- Cambio en la clase para reducir el tamaño de la letra -->
+        </div>
+    </div>
+</div>
+<div class="contenedor">
 <form (submit)="validarFormulario($event)">
     <h2>Formulario de Registro</h2>
     <div class="form-group">
@@ -15,5 +25,7 @@
         <input type="password" id="password" name="password" [(ngModel)]="password">
         <div class="error-message">{{ passwordError }}</div>
     </div>
-    <button type="submit">Enviar</button>
+    <br>
+    <button class="btn btn-dark" type="submit">Enviar</button>
 </form>
+</div>

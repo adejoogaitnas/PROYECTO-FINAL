@@ -1,7 +1,19 @@
-<h1>Adivina el número</h1>
-<p>Introduce un número entre 1 y 100:</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center mt-0 container-fluid "> <!-- Ajuste en el margen superior -->
+            <h1 class="display-6 mt-4">Adivinanza App</h1>
+            <p class="lead mb-1">Ingresa un número del 1 al 100 para descubrir el número oculto, tienes 5 intentos.</p>
+            <!-- Cambio en la clase para reducir el tamaño de la letra -->
+        </div>
+    </div>
+</div>
+<div class="contenedor">
+<br>
 <input type="number" [(ngModel)]="numeroEntrada">
-<button (click)="comprobar()">Comprobar</button>
+<br>
+<br>
+<button (click)="comprobar()" class="btn btn-dark">Comprobar</button>
 
 <p>{{ mensaje }}</p>
-<h4>Cantidad de intentos: {{ intentos }}</h4>
+<h6>Cantidad de intentos: {{ intentos }}</h6>
+</div>

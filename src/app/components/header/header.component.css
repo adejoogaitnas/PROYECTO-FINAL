@@ -7,3 +7,28 @@
     z-index: 1000;
     /* Establece un valor alto para asegurarte de que esté por encima */
 }
+
+i {
+    font-size: 1.25rem;
+    line-height: 47px;
+    transition: 1s;
+    width: 30px;
+    transition: 1s;
+    display: inline-block;
+    width: inherit;
+    color: white;
+    text-align: center
+
+}
+
+i:hover {
+    scale: 1.8;
+    rotate: calc(360deg);
+}
+.btn {
+    background-color: white;
+    
+}
+.btn:hover {
+    background-color:black;
+}

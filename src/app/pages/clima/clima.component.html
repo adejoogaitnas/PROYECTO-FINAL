@@ -1,7 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center mt-0 container-fluid "> <!-- Ajuste en el margen superior -->
+            <h1 class="display-6 mt-4">Clima App</h1>
+            <p class="lead mb-1">Ingresa cualquier ciudad del mundo y te proporcionaremos la temperatura y la humedad actual.</p> <!-- Cambio en la clase para reducir el tamaño de la letra -->
+        </div>
+    </div>
+</div>
+
 <div class="contenedor">
-    <h1>Aplicación de Clima</h1>
     <input type="text" [(ngModel)]="ciudad" placeholder="Ingrese una ciudad" aria-label="Ingrese una ciudad">
-    <button (click)="buscarCiudad()" id="botonBusqueda">Buscar</button>
+    <br>
+    <button class="btn btn-dark" (click)="buscarCiudad()" id="botonBusqueda" >Buscar</button>
     @if (datosClima.ciudadNombre) {
     <div id="datosClima">
         <h2>{{ datosClima.ciudadNombre }}, {{ datosClima.paisNombre }}</h2>

@@ -1,12 +1,41 @@
- body {
-     font-family: Arial, Helvetica, sans-serif;
+:host {
+     display: block;
      text-align: center;
-     margin-top: 50px;
  }
 
- button {
+ .contenedor {
+     max-width: 50em;
+     margin: 2em auto;
+     padding: 20px;
+     border-radius: 8px;
+     text-align: center;
+     background-color: lightgray;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+ }
+
+h1 {
+     color: #333;
+ }
+
+input {
+     padding: 10px;
+     font-size: 16px;
+     border-radius: 4px;
+ }
+
+button {
+     padding: 10px 12px;
+     background-color: black;
+     color: white;
+     border: none;
+     cursor: pointer;
+     border-radius: 4px;
      font-size: 18px;
      margin: 10px;
-     padding: 10px;
      cursor: pointer;
+     transition: 0.5s;
+
+ }
+ button:hover {
+     scale: 1.2;
  }

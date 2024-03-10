@@ -1,6 +1,6 @@
-
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-adivinanza',
@@ -14,8 +14,14 @@ export class AdivinanzaComponent {
   numeroEntrada: number = 0;
   mensaje:string = '';
   intentos:number= 5;
+  contador: number = 0;
 
   comprobar() {
+    if (this.contador >= 5) {
+      this.mensaje = "¡Ya has alcanzado el límite de intentos!";
+      return;
+    }
+
     if (isNaN(this.numeroEntrada) || (this.numeroEntrada < 1) || (this.numeroEntrada > 100)) {
       this.mensaje = "Por favor, ingresa un número entre el 1 y el 100";
       return;
@@ -29,6 +35,8 @@ export class AdivinanzaComponent {
       this.mensaje = "El número a adivinar es menor";
     }
     this.intentos--;
+    this.contador++;
+
     if (this.intentos == 0) {
       this.mensaje = "¡Te has quedado sin intentos! El número era " + this.numeroAzar;
     }

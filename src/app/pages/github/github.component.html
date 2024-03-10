@@ -1,9 +1,20 @@
 <!-- app.component.html -->
-<h1>GitHub User Information</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center mt-0 container-fluid "> <!-- Ajuste en el margen superior -->
+            <h1 class="display-6 mt-4">Github App</h1>
+            <p class="lead mb-1">Ingresa un Username de Github y te proporcionaremos la localización, el numero de repositorios públicos, seguidores y el enlace de su perfil.</p>
+            <!-- Cambio en la clase para reducir el tamaño de la letra -->
+        </div>
+    </div>
+</div>
+<div class="contenedor">
+<br>
 <div>
-    <label for="username">Enter GitHub Username:</label>
-    <input type="text" id="username" required [(ngModel)]="username">
-    <button (click)="getUserInfo()">Get User Info</button>
+    <input type="text" id="username" placeholder="Ingrese un usuario"required [(ngModel)]="username">
+    <br>
+    <br>
+    <button class="btn btn-dark" (click)="getUserInfo()">Get User Info</button>
 </div>
 
 <div id="result">
@@ -15,5 +26,5 @@
     <p>Profile: <a [href]="userData.html_url" target="_blank">{{ userData.html_url }}</a></p>
 </div>
 
-<textarea id="jsonSnippet" rows="10" cols="50" readonly>{{ jsonSnippet }}</textarea>
-
+<textarea id="jsonSnippet" rows="10" cols="55" readonly>{{ jsonSnippet }}</textarea>
+</div>

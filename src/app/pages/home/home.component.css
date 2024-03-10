@@ -4,26 +4,45 @@
 }
 
 h1 {
-    color: #007bff;
+    color: black;
     /* Azul Bootstrap */
 }
 
 .lead {
-    color: #28a745;
+    color: gray;
     /* Verde Bootstrap */
+}
+img{
+    width: 20%;
+    height: auto;
+
 }
 
 .visit-counter {
-    background-color: #ffc107;
-    /* Amarillo Bootstrap */
-    border: 2px solid #007bff;
-    /* Borde azul */
+    background-color:lightgray;
+    
+    border-radius: 8px;
+    
     border-radius: 10px;
-    /* Bordes redondeados */
+    
     padding: 10px;
-    /* Espaciado interno */
+    
     font-size: 18px;
-    /* Tamaño de fuente */
+   
     font-weight: bold;
-    /* Negrita */
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition:0.5s;
+}
+button:hover {
+    scale: 1.2;
 }
