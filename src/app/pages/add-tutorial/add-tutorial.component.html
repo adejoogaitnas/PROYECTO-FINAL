@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 text-center mt-0 container-fluid "> <!-- Ajuste en el margen superior -->
+      <h1 class="display-6 mt-4">Añadir Nota</h1>
+      <p class="lead mb-1">En este apartado puedes añadir una nota con título y descripción.</p>
+      <!-- Cambio en la clase para reducir el tamaño de la letra -->
+    </div>
+  </div>
+</div>
+<div class="contenedor">
+  <div class="submit-form">
+    @if (!submitted) {
+      <div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+            [(ngModel)]="tutorial.title"
+            name="title" placeholder="Escribe el título de la nota"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              id="description"
+              required
+              [(ngModel)]="tutorial.description"
+              name="description" placeholder="Escribe la descripción de la nota"
+              />
+              <br>
+            </div>
+            <button (click)="saveTutorial()" class="btn btn-dark">Enviar</button>
+          </div>
+        }
+
+        @if (submitted) {
+          <div>
+            <h4>Tutorial was submitted successfully!</h4>
+            <button class="btn btn-success" (click)="newTutorial()">Add</button>
+          </div>
+        }
+      </div>
+    </div>

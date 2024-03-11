@@ -6,6 +6,10 @@ import { PeliculasComponent } from './pages/peliculas/peliculas.component';
 import { AdivinanzaComponent } from './pages/adivinanza/adivinanza.component';
 import { ValidacionComponent } from './pages/validacion/validacion.component';
 import { ObjetoWindowComponent } from './pages/objeto-window/objeto-window.component';
+import { AddTutorialComponent } from './pages/add-tutorial/add-tutorial.component';
+import { TutorialDetailsComponent } from './pages/tutorial-details/tutorial-details.component';
+import { TutorialsListComponent } from './pages/tutorials-list/tutorials-list.component';
+
 
 export const routes: Routes = [
 
@@ -16,6 +20,9 @@ export const routes: Routes = [
     { path: 'adivinanza', component: AdivinanzaComponent },
     { path: 'validacion', component: ValidacionComponent },
     { path: 'objeto-window', component: ObjetoWindowComponent },
+    {path: 'add-tutorial', component:AddTutorialComponent},
+    {path: 'tutorials/:id', component:TutorialDetailsComponent},
+    {path: 'tutorials', component:TutorialsListComponent},
 
     { path: '**', redirectTo: '', pathMatch: 'full' },
     
