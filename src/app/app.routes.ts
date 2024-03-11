@@ -22,7 +22,8 @@ export const routes: Routes = [
     { path: 'objeto-window', component: ObjetoWindowComponent },
     {path: 'add-tutorial', component:AddTutorialComponent},
     {path: 'tutorials/:id', component:TutorialDetailsComponent},
-    {path: 'tutorials', component:TutorialsListComponent},
+    { path: 'tutorials', component: TutorialsListComponent },
+    
 
     { path: '**', redirectTo: '', pathMatch: 'full' },
     

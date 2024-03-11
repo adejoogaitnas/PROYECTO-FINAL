@@ -44,10 +44,12 @@
                 </li>
                 
             </ul>
+            <div class="buscador">
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark" type="submit">Search</button>
+                <input type="text" [(ngModel)]="textoBusqueda" id="buscar" class="form-control me-2" placeholder="Buscar" name="buscar">
+                <button class="btn btn-outline-dark" type="submit" (click)="buscar()">Buscar</button>
             </form>
+            </div>
         </div>
     </div>
 </nav> 
