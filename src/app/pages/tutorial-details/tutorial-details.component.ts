@@ -64,7 +64,7 @@ export class TutorialDetailsComponent {
         this.currentTutorial.published = status;
         this.message = res.message
           ? res.message
-          : 'The status was updated successfully!';
+          : '';
       },
       error: (e) => console.error(e)
     });
@@ -80,7 +80,7 @@ export class TutorialDetailsComponent {
           console.log(res);
           this.message = res.message
             ? res.message
-            : 'This tutorial was updated successfully!';
+            : '';
         },
         error: (e) => console.error(e)
       });

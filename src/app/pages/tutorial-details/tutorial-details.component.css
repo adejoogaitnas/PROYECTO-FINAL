@@ -1,8 +1,45 @@
+
+
+
+:host {
+  display: block;
+  text-align: center;
+}
+
 .edit-form {
-  max-width: 400px;
   margin: auto;
+  max-width: 30em;
+  margin: 2em auto;
+  padding: 1.2em;
+  border-radius: 8px;
+  text-align: center;
+  background-color: lightgray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  color: #333;
+
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
 }
 
 button {
-  color: black;
+  padding: 10px 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-right: 1.2em; /* Agrega una separación de 10px a la derecha */
+}
+
+button:hover {
+  scale: 1.2;
 }

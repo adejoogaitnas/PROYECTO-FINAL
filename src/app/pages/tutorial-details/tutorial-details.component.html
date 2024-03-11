@@ -1,39 +1,41 @@
 @if (viewMode) {
-  <div>
+  <div class="contenedor">
     @if (currentTutorial.id) {
       <div>
-        <h4>Tutorial</h4>
+        <h4>Nota</h4>
         <div>
-          <label><strong>Title:</strong></label> {{ currentTutorial.title }}
+          <label><strong>Título:</strong></label> {{ currentTutorial.title }}
         </div>
         <div>
-          <label><strong>Description:</strong></label>
+          <label><strong>Descripción:</strong></label>
           {{ currentTutorial.description }}
         </div>
         <div>
-          <label><strong>Status:</strong></label>
-          {{ currentTutorial.published ? "Published" : "Pending" }}
+          <label><strong>Estado:</strong></label>
+          {{ currentTutorial.published ? "Published" : "Pendiente" }}
         </div>
-        <a class="badge badge-warning"
-          routerLink="/tutorials/{{ currentTutorial.id }}">
-          Edit
-        </a>
+        <br>
+        
+       
+        <button class="btn btn-dark"><a style="text-decoration: none;" class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id }}">
+          Editar
+        </a></button>
       </div>
     }
     @if (!currentTutorial) {
       <div>
         <br />
-        <p>Please click on a Tutorial...</p>
+        <p>Por favor dale click a notas</p>
       </div>
     }
   </div>
 } @else {
   @if (currentTutorial.id) {
     <div class="edit-form">
-      <h4>Tutorial</h4>
+      <h4>Nota</h4>
       <form>
         <div class="form-group">
-          <label for="title">Title</label>
+          <label for="title">Título</label>
           <input
             type="text"
             class="form-control"
@@ -43,7 +45,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="description">Description</label>
+            <label for="description">Descripción</label>
             <input
               type="text"
               class="form-control"
@@ -52,17 +54,19 @@
               name="description"
               />
             </div>
+            <br>
             <div class="form-group">
-              <label><strong>Status:</strong></label>
-              {{ currentTutorial.published ? "Published" : "Pending" }}
+              <label><strong>Estado:</strong></label>
+              {{ currentTutorial.published ? "Publicada" : "Pendiente" }}
             </div>
+            <br>
           </form>
           @if (currentTutorial.published) {
             <button
               class="badge badge-primary mr-2"
               (click)="updatePublished(false)"
               >
-              UnPublish
+              Retirar
             </button>
           }
           @if (!currentTutorial.published) {
@@ -70,26 +74,25 @@
               class="badge badge-primary mr-2"
               (click)="updatePublished(true)"
               >
-              Publish
+              Publicar
             </button>
           }
           <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
-            Delete
+            Eiminar
           </button>
           <button
             type="submit"
             class="badge badge-success mb-2"
             (click)="updateTutorial()"
             >
-            Update
+            Actualizar
           </button>
-          <p>{{ message }}</p>
         </div>
       }
       @if (!currentTutorial.id) {
         <div>
           <br />
-          <p>Cannot access this Tutorial...</p>
+          <p>No se puede acceder a esta nota</p>
         </div>
       }
     }

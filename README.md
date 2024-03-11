@@ -25,3 +25,43 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+EXPLICACIÓN DE COMO PONER EN MARCHA EL PROYECTO
+
+Lo primero que tendremos que hacer es descargar este repositorio que contiene el servidor del proyecto
+
+https://github.com/adejoogaitnas/SERVIDOR-PROYECTO-FINAL.git
+
+Una vez descargado el servidor ingresamos en el y ejecutamos el siguiente comando
+
+npm install express
+
+Este comando nos permitirá instalar express como una dependencia para poder levantar el proyecto
+
+Levantamos el servidor con el siguiente comando
+
+node server.js
+
+Una vez que esta levantado el servidor ejecutamos en este repositorio
+
+https://github.com/adejoogaitnas/PROYECTO-FINAL.git
+
+En la rama desarollo1.6
+
+npm install
+
+Para instalar las dependencias de Node.js al
+
+Una vez instaladas todas las dependencias ejecutaremos el siguiente comando para levantar la aplicación
+
+npm start
+
+La aplicación se nos abrirá para poder realizar las comprobaciones pertinentes
+
+
+
+
+
+
+
